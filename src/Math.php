@@ -7,7 +7,6 @@
         while (($line = fgetcsv($file)) !== FALSE) {
 			if ($x === TRUE) {
 				$x = FALSE;
-				$titles = $line;
 				continue;
 			}else{
 				if ($line[2] === 'true') {
@@ -18,9 +17,7 @@
         }
         fclose($file);
 		$avg = $avg / $ct;
-		echo "Math Average: ";
-		print_r($avg);
-		echo '<br/>';
+        return $avg;
     }
-optimizedMathAvg();
+echo("Average: " . optimizedMathAvg());
 ?>
