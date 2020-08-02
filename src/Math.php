@@ -2,7 +2,7 @@
 
 class Math
 {
-    function optimizedMathAvg() {
+    public function optimizedMathAvg() {
         $file = fopen('../assets/tabular.csv', 'r');
         $x = TRUE;
         $avg = 0;
@@ -23,6 +23,4 @@ class Math
         return $avg;
     }
 }
-$math = new Math();
-echo("Average: " . $math->optimizedMathAvg());
 ?>
