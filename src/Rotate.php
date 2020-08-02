@@ -1,4 +1,7 @@
 <?php
+
+class Rotate
+{
 	function RotateArray($rotations) {
 		$contentJson = file_get_contents('../assets/rotate.json');
 		$arrayJson = json_decode($contentJson, true);
@@ -12,8 +15,10 @@
 			array_push($arrayJson, $addToEnd);
 		}
 		return $arrayJson;
-	}
-$lsArray = RotateArray(4);
+    }
+}
+$rotate = new Rotate();
+$lsArray = $rotate->RotateArray(4);
 echo "Left Shifted Array: ";
 print_r($lsArray);
 ?>

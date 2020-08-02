@@ -1,4 +1,7 @@
 <?php
+
+class Math
+{
     function optimizedMathAvg() {
         $file = fopen('../assets/tabular.csv', 'r');
         $x = TRUE;
@@ -19,5 +22,7 @@
 		$avg = $avg / $ct;
         return $avg;
     }
-echo("Average: " . optimizedMathAvg());
+}
+$math = new Math();
+echo("Average: " . $math->optimizedMathAvg());
 ?>
